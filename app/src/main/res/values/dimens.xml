@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="mini_margin">3dp</dimen>
+    <dimen name="edit_tamano">22sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">16dp</dimen>
+    <dimen name="boton_nav">30sp</dimen>
+    <dimen name="boton_padding">15dp</dimen>
+    <dimen name="barra_maximo_alto">150dp</dimen>
+    <dimen name="cabnav_titulo">45sp</dimen>
+    <dimen name="imagen_circular_radio">130dp</dimen>
+    <dimen name="imagen_circular_radio_sombra">110dp</dimen>
+    <dimen name="forma_navegador_slider_abajo">150dp</dimen>
+    <dimen name="imagen_circular_tamano_sombra">10dp</dimen>
+    <dimen name="forma_navegador_slider_arriba">0dp</dimen>
+    <dimen name="forma_navegador_slider_margen_abajo">36dp</dimen>
+    <dimen name="tamano_navslid_icono">35dp</dimen>
+    <dimen name="padding_navslid_item">20dp</dimen>
+    <dimen name="act3_item_margen_h">64dp</dimen>
+    <dimen name="act3_item_margen_v">25dp</dimen>
+    <dimen name="act3_txt_margen_h">32dp</dimen>
+    <dimen name="act3_txt_margen_v">0dp</dimen>
+    <dimen name="act3_btn_margen_h">64dp</dimen>
+    <dimen name="act3_btn_margen_v">50dp</dimen>
+    <dimen name="boton_txt_tamano">25sp</dimen>
+
+</resources>

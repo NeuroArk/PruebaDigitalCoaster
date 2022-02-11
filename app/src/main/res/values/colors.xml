@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FC8694</color>
+    <color name="purple_500">#EE004B</color>
+    <color name="purple_700">#B30015</color>
+    <color name="teal_200">#DA03CF</color>
+    <color name="teal_700">#870175</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="rojizo_negro">#302226</color>
+    <color name="rojizo_gris">#6C1919</color>
+    <color name="rojizo">#AA2226</color>
+    <color name="transparent">#00000000</color>
+    <color name="imagen_circular_sombra">#33000000</color>
+</resources>

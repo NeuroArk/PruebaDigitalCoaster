@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NumerosFragment"
+    >
+    <data>
+        <variable name="viewModel"
+            type="neuroark.appsytutoriales.pruebadigitalcoaster.ui.main.actividad_1.NumerosModel"
+            />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/titulo_numero" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/titulo_lista_anterior" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:gravity="center"
+            android:text="@={viewModel.textoListaAnterior}" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/titulo_lista_nueva" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:gravity="center"
+            android:text="@={viewModel.textoListaNueva}" />
+
+        <EditText
+            android:id="@+id/editNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:autofillHints="@string/hint_numero"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="@={``+viewModel.editNumeroAnadir}"
+            android:textSize="@dimen/edit_tamano"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+        <Button
+            android:id="@+id/botonNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:gravity="center"
+            android:text="@string/boton_anadir" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:gravity="center"
+                android:text="@string/titulo_sustituir" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/cual_numero"
+                    android:labelFor="@id/editNumeroCual"
+                    />
+
+                <EditText
+                    android:id="@+id/editNumeroCual"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:layout_weight="0.35"
+                    android:autofillHints="@string/hint_numero"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textSize="@dimen/edit_tamano"
+                    android:text="@={``+viewModel.editQueSustituir}" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:gravity="center"
+                    android:text="@string/con_cual_numero"
+                    android:labelFor="@id/editNumeroCual"
+                    />
+                <EditText
+                    android:id="@+id/editNumeroConCual"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:gravity="center"
+                    android:text="@={``+viewModel.editConQueSustituir}"
+                    android:inputType="number"
+                    android:textSize="@dimen/edit_tamano"
+                    android:autofillHints="@string/hint_numero"
+                    />
+            </LinearLayout>
+            <Button
+                android:id="@+id/botonSustituir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:gravity="center"
+                android:text="@string/boton_sustituir" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

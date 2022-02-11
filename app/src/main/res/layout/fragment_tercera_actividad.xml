@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="viewModel"
+            type="neuroark.appsytutoriales.pruebadigitalcoaster.ui.main.actividad_3.TerceraActividadModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/con_cual_numero"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".ui.main.actividad_3.TerceraActividad">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            tools:context=".ui.main.actividad_3.TerceraActividad">
+
+            <ImageView
+                android:id="@+id/act3_img_icono"
+                android:layout_width="@dimen/imagen_circular_radio"
+                android:layout_height="@dimen/imagen_circular_radio"
+                android:background="@drawable/imagen_circular"
+                android:contentDescription="@string/imagen_perfil"
+                android:elevation="10dp"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:translationZ="1dp"
+                app:layout_constraintBottom_toTopOf="@+id/act3_espacio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/act3_espacio"
+                app:layout_constraintVertical_bias="0.060000002"
+                app:srcCompat="@drawable/vector_navslid_perfil" />
+
+            <Space
+                android:id="@+id/act3_espacio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/act3_layout_imagen"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:id="@+id/act3_layout_imagen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo_navslid"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/act3_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="100dp"
+                    android:gravity="center"
+                    android:text="@string/cavnav_titulo"
+                    android:textColor="@color/purple_200"
+                    android:textSize="@dimen/cabnav_titulo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/act3_layout_items"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/forma_navegador_slider_margen_abajo"
+                android:layout_marginBottom="@dimen/forma_navegador_slider_margen_abajo"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/act3_img_icono"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/act3_item_margen_h"
+                    android:layout_marginTop="@dimen/act3_item_margen_v"
+                    android:layout_marginEnd="@dimen/act3_item_margen_h"
+                    android:layout_marginBottom="@dimen/act3_item_margen_v"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/tamano_navslid_icono"
+                        android:layout_height="@dimen/tamano_navslid_icono"
+                        android:src="@drawable/vector_navslid_ic_persona" />
+
+                    <TextView
+                        android:id="@+id/act3_txt_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/act3_txt_margen_h"
+                        android:layout_marginTop="@dimen/act3_txt_margen_v"
+                        android:layout_marginEnd="@dimen/act3_txt_margen_h"
+                        android:layout_marginBottom="@dimen/act3_txt_margen_v"
+                        android:padding="3dp"
+                        android:text="@{viewModel.perfil.nombre}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/act3_item_margen_h"
+                    android:layout_marginTop="@dimen/act3_item_margen_v"
+                    android:layout_marginEnd="@dimen/act3_item_margen_h"
+                    android:layout_marginBottom="@dimen/act3_item_margen_v"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/tamano_navslid_icono"
+                        android:layout_height="@dimen/tamano_navslid_icono"
+                        android:src="@drawable/vector_navslid_ic_cumpleanos" />
+
+                    <TextView
+                        android:id="@+id/act3_txt_cumpleanos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/act3_txt_margen_h"
+                        android:layout_marginTop="@dimen/act3_txt_margen_v"
+                        android:layout_marginEnd="@dimen/act3_txt_margen_h"
+                        android:layout_marginBottom="@dimen/act3_txt_margen_v"
+                        android:padding="3dp"
+                        android:text="@{viewModel.perfil.cumpleanos}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/act3_item_margen_h"
+                    android:layout_marginTop="@dimen/act3_item_margen_v"
+                    android:layout_marginEnd="@dimen/act3_item_margen_h"
+                    android:layout_marginBottom="@dimen/act3_item_margen_v"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/tamano_navslid_icono"
+                        android:layout_height="@dimen/tamano_navslid_icono"
+                        android:src="@drawable/vector_navslid_ic_celular" />
+
+                    <TextView
+                        android:id="@+id/act3_txt_celular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/act3_txt_margen_h"
+                        android:layout_marginTop="@dimen/act3_txt_margen_v"
+                        android:layout_marginEnd="@dimen/act3_txt_margen_h"
+                        android:layout_marginBottom="@dimen/act3_txt_margen_v"
+                        android:padding="3dp"
+                        android:text="@{viewModel.perfil.celular}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/act3_item_margen_h"
+                    android:layout_marginTop="@dimen/act3_item_margen_v"
+                    android:layout_marginEnd="@dimen/act3_item_margen_h"
+                    android:layout_marginBottom="@dimen/act3_item_margen_v"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/tamano_navslid_icono"
+                        android:layout_height="@dimen/tamano_navslid_icono"
+                        android:src="@drawable/vector_navslid_ic_instagram" />
+
+                    <TextView
+                        android:id="@+id/act3_txt_instagram"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/act3_txt_margen_h"
+                        android:layout_marginTop="@dimen/act3_txt_margen_v"
+                        android:layout_marginEnd="@dimen/act3_txt_margen_h"
+                        android:layout_marginBottom="@dimen/act3_txt_margen_v"
+                        android:clickable="true"
+                        android:contentDescription="@string/instagram"
+                        android:focusable="true"
+                        android:padding="3dp"
+                        android:text="@{viewModel.perfil.instagram}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/act3_item_margen_h"
+                    android:layout_marginTop="@dimen/act3_item_margen_v"
+                    android:layout_marginEnd="@dimen/act3_item_margen_h"
+                    android:layout_marginBottom="@dimen/act3_item_margen_v"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/tamano_navslid_icono"
+                        android:layout_height="@dimen/tamano_navslid_icono"
+                        android:src="@drawable/vector_navslid_ic_correo" />
+
+                    <TextView
+                        android:id="@+id/act3_txt_correo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/act3_txt_margen_h"
+                        android:layout_marginTop="@dimen/act3_txt_margen_v"
+                        android:layout_marginEnd="@dimen/act3_txt_margen_h"
+                        android:layout_marginBottom="@dimen/act3_txt_margen_v"
+                        android:padding="3dp"
+                        android:text="@{viewModel.perfil.correo}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/act3_item_margen_h"
+                    android:layout_marginTop="@dimen/act3_item_margen_v"
+                    android:layout_marginEnd="@dimen/act3_item_margen_h"
+                    android:layout_marginBottom="@dimen/act3_item_margen_v"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/tamano_navslid_icono"
+                        android:layout_height="@dimen/tamano_navslid_icono"
+                        android:src="@drawable/vector_navslid_ic_contrasena" />
+
+                    <TextView
+                        android:id="@+id/act3_txt_contrasena"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/act3_txt_margen_h"
+                        android:layout_marginTop="@dimen/act3_txt_margen_v"
+                        android:layout_marginEnd="@dimen/act3_txt_margen_h"
+                        android:layout_marginBottom="@dimen/act3_txt_margen_v"
+                        android:padding="3dip"
+                        android:text="@{viewModel.perfil.contrasena}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.widget.Button
+                android:id="@+id/act3_btn_editar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/editar_perfil"
+                android:textSize="@dimen/boton_txt_tamano"
+                android:background="@drawable/fondo_boton_navegacion"
+                android:textColor="@color/estados_color_boton"
+                android:textAllCaps="false"
+                android:layout_marginStart="@dimen/act3_btn_margen_h"
+                android:layout_marginTop="@dimen/act3_btn_margen_v"
+                android:layout_marginEnd="@dimen/act3_btn_margen_h"
+                android:layout_marginBottom="@dimen/act3_btn_margen_v"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/act3_layout_items" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

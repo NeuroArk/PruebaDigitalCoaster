@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/con_cual_numero"
+    android:background="@drawable/forma_rectangulo_actividad"
     tools:context=".ui.main.actividad_1.PrimerActividad">
 
     <LinearLayout

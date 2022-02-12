@@ -3,23 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
     <item
-        android:id="@+id/item_navslid_nombre"
-        android:title="@string/nombre" />
+        android:id="@+id/item_navslid_actividad_1"
+        android:title="@string/actividad_1" />
     <item
-        android:id="@+id/item_navslid_cumpleaños"
-        android:title="@string/cumpleaños" />
+        android:id="@+id/item_navslid_actividad_2"
+        android:title="@string/actividad_2" />
     <item
-        android:id="@+id/item_navslid_telefono"
-        android:title="@string/telefono" />
+        android:id="@+id/item_navslid_actividad_3"
+        android:title="@string/actividad_3" />
     <item
-        android:id="@+id/item_navslid_correo"
-        android:title="@string/correo" />
+        android:id="@+id/item_navslid_actividad_4"
+        android:title="@string/actividad_4" />
     <item
-        android:id="@+id/item_navslid_instagram"
-        android:title="@string/instagram" />
-    <item
-        android:id="@+id/item_navslid_passworld"
-        android:title="@string/password" />
+        android:id="@+id/item_navslid_navegador"
+        android:title="@string/navegador" />
 </menu>

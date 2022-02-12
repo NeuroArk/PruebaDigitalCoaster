@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_collapseMode="parallax"
+            app:titleTextColor="@color/estados_color_boton"
             app:menu="@menu/menu_barra"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </com.google.android.material.appbar.CollapsingToolbarLayout>

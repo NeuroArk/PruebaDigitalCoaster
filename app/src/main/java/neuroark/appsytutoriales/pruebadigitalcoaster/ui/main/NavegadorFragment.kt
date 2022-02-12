@@ -26,14 +26,18 @@ class NavegadorFragment : Fragment() {
         val btnAct1 = v.findViewById<View>(R.id.button_nav_act1)
         val btnAct2 = v.findViewById<View>(R.id.button_nav_act2)
         val btnAct3 = v.findViewById<View>(R.id.button_nav_act3)
+        val btnAct4 = v.findViewById<View>(R.id.button_nav_act4)
         btnAct1.setOnClickListener {
             navController.navigate(R.id.action_navegadorFragment_to_primerActividad)
         }
         btnAct2.setOnClickListener {
-            navController.navigate(R.id.action_navegadorFragment_to_terceraActividad)
+            navController.navigate(R.id.action_navegadorFragment_to_segundaActividad)
         }
         btnAct3.setOnClickListener {
-            navController.navigate(R.id.action_navegadorFragment_to_primerActividad)
+            navController.navigate(R.id.action_navegadorFragment_to_terceraActividad)
+        }
+        btnAct4.setOnClickListener {
+            navController.navigate(R.id.action_navegadorFragment_to_cuartaActividad)
         }
         return v
     }

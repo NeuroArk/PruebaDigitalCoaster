@@ -57,12 +57,15 @@
             android:text="@={``+viewModel.editNumeroAnadir}"
             android:textSize="@dimen/edit_tamano"
             tools:ignore="LabelFor,SpeakableTextPresentCheck" />
-        <Button
+        <android.widget.Button
             android:id="@+id/botonNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             android:gravity="center"
+            android:background="@drawable/forma_rectangulo_boton_1"
+            android:textColor="@color/estados_color_boton"
+            android:textAllCaps="false"
             android:text="@string/boton_anadir" />
         <LinearLayout
             android:layout_width="match_parent"
@@ -124,12 +127,15 @@
                     android:autofillHints="@string/hint_numero"
                     />
             </LinearLayout>
-            <Button
+            <android.widget.Button
                 android:id="@+id/botonSustituir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
                 android:gravity="center"
+                android:background="@drawable/forma_rectangulo_boton_1"
+                android:textColor="@color/estados_color_boton"
+                android:textAllCaps="false"
                 android:text="@string/boton_sustituir" />
         </LinearLayout>
     </LinearLayout>

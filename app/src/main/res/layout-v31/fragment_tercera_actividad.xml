@@ -192,17 +192,14 @@
                     android:gravity="center"
                     android:clickable="true"
                     android:focusable="true"
+                    android:allowClickWhenDisabled="true"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="@dimen/tamano_navslid_icono"
                         android:layout_height="@dimen/tamano_navslid_icono"
                         android:layout_marginEnd="@dimen/act3_img_margen_r"
-                        android:src="@drawable/vector_navslid_ic_instagram"
-                        android:enabled="false"
-                        android:clickable="false"
-                        android:focusable="false"
-                        />
+                        android:src="@drawable/vector_navslid_ic_instagram" />
 
                     <EditText
                         android:id="@+id/act3_txt_instagram"
@@ -212,10 +209,8 @@
                         android:layout_marginTop="@dimen/act3_txt_margen_v"
                         android:layout_marginEnd="@dimen/act3_txt_margen_h"
                         android:layout_marginBottom="@dimen/act3_txt_margen_v"
-                        android:inputType="text"
                         android:enabled="false"
-                        android:clickable="false"
-                        android:focusable="false"
+                        android:inputType="text"
                         android:contentDescription="@string/instagram"
                         android:text="@{viewModel.perfil.instagram}" />
                 </LinearLayout>

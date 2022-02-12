@@ -18,9 +18,10 @@
     <dimen name="forma_navegador_slider_margen_abajo">36dp</dimen>
     <dimen name="tamano_navslid_icono">35dp</dimen>
     <dimen name="padding_navslid_item">20dp</dimen>
-    <dimen name="act3_item_margen_h">64dp</dimen>
+    <dimen name="act3_item_margen_h">50dp</dimen>
     <dimen name="act3_item_margen_v">25dp</dimen>
-    <dimen name="act3_txt_margen_h">32dp</dimen>
+    <dimen name="act3_txt_margen_h">0dp</dimen>
+    <dimen name="act3_img_margen_r">30dp</dimen>
     <dimen name="act3_txt_margen_v">0dp</dimen>
     <dimen name="act3_btn_margen_h">64dp</dimen>
     <dimen name="act3_btn_margen_v">50dp</dimen>

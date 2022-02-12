@@ -21,7 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
-            android:padding="0dp"
+    android:layout_marginEnd="@dimen/act3_img_margen_r"
+                                android:padding="0dp"
             tools:context=".ui.main.actividad_3.TerceraActividad">
 
             <ImageView
@@ -75,7 +76,7 @@
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="100dp"
                     android:gravity="center"
-                    android:text="@string/cavnav_titulo"
+                    android:text="@{viewModel.perfil.nombre}"
                     android:textColor="@color/purple_200"
                     android:textSize="@dimen/cabnav_titulo" />
             </LinearLayout>
@@ -107,6 +108,7 @@
                     <ImageView
                         android:layout_width="@dimen/tamano_navslid_icono"
                         android:layout_height="@dimen/tamano_navslid_icono"
+                        android:layout_marginEnd="@dimen/act3_img_margen_r"
                         android:src="@drawable/vector_navslid_ic_persona" />
 
                     <EditText
@@ -118,7 +120,6 @@
                         android:layout_marginEnd="@dimen/act3_txt_margen_h"
                         android:layout_marginBottom="@dimen/act3_txt_margen_v"
                         android:inputType="textPersonName"
-                        android:padding="3dp"
                         android:text="@={viewModel.perfil.nombre}" />
                 </LinearLayout>
 
@@ -135,6 +136,7 @@
                     <ImageView
                         android:layout_width="@dimen/tamano_navslid_icono"
                         android:layout_height="@dimen/tamano_navslid_icono"
+                        android:layout_marginEnd="@dimen/act3_img_margen_r"
                         android:src="@drawable/vector_navslid_ic_cumpleanos" />
 
                     <EditText
@@ -146,7 +148,6 @@
                         android:layout_marginEnd="@dimen/act3_txt_margen_h"
                         android:layout_marginBottom="@dimen/act3_txt_margen_v"
                         android:inputType="date"
-                        android:padding="3dp"
                         android:text="@={viewModel.perfil.cumpleanos}" />
                 </LinearLayout>
 
@@ -163,6 +164,7 @@
                     <ImageView
                         android:layout_width="@dimen/tamano_navslid_icono"
                         android:layout_height="@dimen/tamano_navslid_icono"
+                        android:layout_marginEnd="@dimen/act3_img_margen_r"
                         android:src="@drawable/vector_navslid_ic_celular" />
 
                     <EditText
@@ -174,7 +176,6 @@
                         android:layout_marginEnd="@dimen/act3_txt_margen_h"
                         android:layout_marginBottom="@dimen/act3_txt_margen_v"
                         android:inputType="phone"
-                        android:padding="3dp"
                         android:text="@={viewModel.perfil.celular}" />
                 </LinearLayout>
 
@@ -191,6 +192,7 @@
                     <ImageView
                         android:layout_width="@dimen/tamano_navslid_icono"
                         android:layout_height="@dimen/tamano_navslid_icono"
+                        android:layout_marginEnd="@dimen/act3_img_margen_r"
                         android:src="@drawable/vector_navslid_ic_instagram" />
 
                     <EditText
@@ -203,7 +205,6 @@
                         android:layout_marginBottom="@dimen/act3_txt_margen_v"
                         android:contentDescription="@string/instagram"
                         android:inputType="text"
-                        android:padding="3dp"
                         android:text="@={viewModel.perfil.instagram}" />
                 </LinearLayout>
 
@@ -219,6 +220,7 @@
                     <ImageView
                         android:layout_width="@dimen/tamano_navslid_icono"
                         android:layout_height="@dimen/tamano_navslid_icono"
+                        android:layout_marginEnd="@dimen/act3_img_margen_r"
                         android:src="@drawable/vector_navslid_ic_correo" />
                     <EditText
                         android:id="@+id/act3_editar_txt_correo"
@@ -229,7 +231,6 @@
                         android:layout_marginEnd="@dimen/act3_txt_margen_h"
                         android:layout_marginBottom="@dimen/act3_txt_margen_v"
                         android:inputType="textEmailAddress"
-                        android:padding="3dp"
                         android:text="@={viewModel.perfil.correo}" />
                 </LinearLayout>
                 <LinearLayout
@@ -244,6 +245,7 @@
                     <ImageView
                         android:layout_width="@dimen/tamano_navslid_icono"
                         android:layout_height="@dimen/tamano_navslid_icono"
+                        android:layout_marginEnd="@dimen/act3_img_margen_r"
                         android:src="@drawable/vector_navslid_ic_contrasena" />
                     <EditText
                         android:id="@+id/act3_editar_txt_contrasena"
@@ -254,7 +256,6 @@
                         android:layout_marginEnd="@dimen/act3_txt_margen_h"
                         android:layout_marginBottom="@dimen/act3_txt_margen_v"
                         android:inputType="textPassword"
-                        android:padding="3dp"
                         android:text="@={viewModel.perfil.contrasena}" />
                 </LinearLayout>
 
@@ -266,7 +267,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/modificar"
                 android:textSize="@dimen/boton_txt_tamano"
-                android:background="@drawable/fondo_boton_navegacion"
+                android:background="@drawable/fondo_boton"
                 android:textColor="@color/estados_color_boton"
                 android:textAllCaps="false"
                 android:layout_marginStart="@dimen/act3_btn_margen_h"

@@ -129,4 +129,11 @@
     <string name="imagen_perfil">Imagen de perfil</string>
     <string name="editar_perfil">Editar perfil</string>
     <string name="modificar">Modificar</string>
+    <string name="manejo_vistas">Manejo de vistas XML</string>
+    <string name="navegador">Navegador</string>
+    <string name="programacion_iOS">Programación en IOS</string>
+    <string name="escaner_codigo_QR">Escaner de código QR</string>
+    <string name="actividad_2">Actividad 2</string>
+    <string name="regresar">Regresar</string>
+    <string name="capturar">Capturar</string>
 </resources>

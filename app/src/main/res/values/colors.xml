@@ -12,4 +12,7 @@
     <color name="rojizo">#AA2226</color>
     <color name="transparent">#00000000</color>
     <color name="imagen_circular_sombra">#33000000</color>
+    <color name="lila_rojizo_negro">#2E262B</color>
+    <color name="lila_rojizo_gris">#3C1829</color>
+    <color name="lila_rojizo">#612234</color>
 </resources>

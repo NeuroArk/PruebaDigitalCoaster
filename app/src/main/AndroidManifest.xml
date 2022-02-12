@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="neuroark.appsytutoriales.pruebadigitalcoaster">
+    <uses-permission android:name="android.permission.CAMERA" />
     <queries>
         <package android:name="com.instagram.android" />
         <intent>
@@ -15,7 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebaDigitalCoaster">
-         <activity
+        <!-- To use multiple models: android:value="barcode,model2,model3" -->
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="barcode" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

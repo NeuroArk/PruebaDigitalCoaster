@@ -56,12 +56,15 @@
             android:autofillHints="@string/hint_texto"
             android:textSize="@dimen/edit_tamano"
             tools:ignore="LabelFor" />
-        <Button
+        <android.widget.Button
             android:id="@+id/botonTexto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             android:gravity="center"
+            android:background="@drawable/forma_rectangulo_boton_1"
+            android:textColor="@color/estados_color_boton"
+            android:textAllCaps="false"
             android:text="@string/boton_anadir" />
     </LinearLayout>
 </layout>

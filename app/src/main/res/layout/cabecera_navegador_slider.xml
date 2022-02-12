@@ -11,6 +11,7 @@
         android:layout_height="150dp"
         android:background="@drawable/imagen_circular"
         android:scaleType="fitXY"
+        android:src="@android:drawable/ic_menu_view"
         android:translationZ="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_menu_view"
         tools:srcCompat="@android:drawable/ic_menu_view" />
 
     <Space

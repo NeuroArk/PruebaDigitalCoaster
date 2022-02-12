@@ -5,15 +5,19 @@
       <map>
         <entry key="app/src/main/res/drawable-v23/imagen_circular.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/boton_navegacion.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/fondo_actividad.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/fondo_boton.xml" value="0.172" />
         <entry key="app/src/main/res/drawable/fondo_boton_navegacion.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/fondo_navslid.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/fondo_toolbar.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/forma_boton_1.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/forma_circulo_imagen.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/forma_circulo_imagen_inverso.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/forma_circulo_navslid_1.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/forma_circulo_transparente.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/forma_imagen_circular.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/forma_navegador_slider.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/forma_rectangulo_actividad.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/forma_rectangulo_boton_1.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/forma_rectangulo_toolbar.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_icono_perfil.xml" value="0.1" />
@@ -22,8 +26,11 @@
         <entry key="app/src/main/res/drawable/imagen_circular.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/vector_perfil.xml" value="0.1565" />
         <entry key="app/src/main/res/drawable/vector_perfil_blanco.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-v31/fragment_tercera_actividad.xml" value="0.1" />
         <entry key="app/src/main/res/layout/barra_principal.xml" value="0.1" />
         <entry key="app/src/main/res/layout/cabecera_navegador_slider.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/cuarta_actividad_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_cuarta_actividad.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_navegador.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_numeros.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_primer_actividad.xml" value="0.1" />
@@ -31,8 +38,9 @@
         <entry key="app/src/main/res/layout/fragment_tercera_actividad_editar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_textos.xml" value="0.1" />
         <entry key="app/src/main/res/layout/main_activity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/segunda_actividad_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/menu/menu_barra.xml" value="0.1" />
-        <entry key="app/src/main/res/menu/menu_navegador_slider.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu_navegador_slider.xml" value="0.5" />
         <entry key="app/src/main/res/menu/navegador.xml" value="0.1" />
       </map>
     </option>

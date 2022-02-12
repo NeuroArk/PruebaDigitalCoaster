@@ -11,16 +11,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation
 import neuroark.appsytutoriales.pruebadigitalcoaster.R
 import neuroark.appsytutoriales.pruebadigitalcoaster.databinding.FragmentTerceraActividadBinding
 
 class TerceraActividad : Fragment() {
-
     companion object {
         fun newInstance() = TerceraActividad()
     }
-
-    private lateinit var viewModel: TerceraActividadModel
     private lateinit var binding: FragmentTerceraActividadBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +27,14 @@ class TerceraActividad : Fragment() {
     ): View? {
         binding = FragmentTerceraActividadBinding.inflate(inflater,container,false)
         binding.lifecycleOwner = this
-        binding.act3TxtInstagram.setOnClickListener{
+        val navController = Navigation.findNavController(
+            requireActivity(),
+            R.id.nav_host_fragment
+        )
+        binding.act3BtnEditar.setOnClickListener{
+            navController.navigate(R.id.action_terceraActividad_to_terceraActividadEditar)
+        }
+        binding.act3LayoutInstagram.setOnClickListener{
             abrirInstagram()
         }
         return binding.root
@@ -36,11 +42,11 @@ class TerceraActividad : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this)[TerceraActividadModel::class.java]
+        val viewModel:TerceraActividadModel by activityViewModels()
         binding.viewModel=viewModel
     }
     fun abrirInstagram(){
-        val url="http://instagram.com/_u/${viewModel.perfil.value!!.instagram}"
+        val url="http://instagram.com/_u/${binding.viewModel!!.perfil.value!!.instagram}"
         val uri = Uri.parse(url)
         val insta = Intent(Intent.ACTION_VIEW, uri)
         insta.setPackage("com.instagram.android")

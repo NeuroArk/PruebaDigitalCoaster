@@ -4,6 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/navegadorFragment">
+    <action android:id="@+id/action_global_navegador"
+        app:destination="@id/navegadorFragment"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_actividad_1"
+        app:destination="@id/primerActividad"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_actividad_3"
+        app:destination="@id/terceraActividad"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_actividad_3b"
+        app:destination="@id/terceraActividadEditar"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_actividad_2"
+        app:destination="@id/segundaActividad"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    <action android:id="@+id/action_global_actividad_4"
+        app:destination="@id/cuartaActividad"
+        app:enterAnim="@android:anim/slide_in_left"
+        app:exitAnim="@android:anim/slide_out_right"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
     <fragment
         android:id="@+id/navegadorFragment"
         android:name="neuroark.appsytutoriales.pruebadigitalcoaster.ui.main.NavegadorFragment"
@@ -19,6 +55,27 @@
         <action
             android:id="@+id/action_navegadorFragment_to_terceraActividad"
             app:destination="@id/terceraActividad"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_navegadorFragment_to_cuartaActividad"
+            app:destination="@id/cuartaActividad"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_navegadorFragment_self"
+            app:destination="@id/navegadorFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_navegadorFragment_to_segundaActividad"
+            app:destination="@id/segundaActividad"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
@@ -40,10 +97,55 @@
     <fragment
         android:id="@+id/terceraActividad"
         android:name="neuroark.appsytutoriales.pruebadigitalcoaster.ui.main.actividad_3.TerceraActividad"
-        android:label="fragment_tercera_actividad"
+        android:label="@string/manejo_vistas"
         tools:layout="@layout/fragment_tercera_actividad" >
         <action
             android:id="@+id/action_terceraActividad_to_navegadorFragment"
+            app:destination="@id/navegadorFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_terceraActividad_to_terceraActividadEditar"
+            app:destination="@id/terceraActividadEditar"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/terceraActividadEditar"
+        android:name="neuroark.appsytutoriales.pruebadigitalcoaster.ui.main.actividad_3.TerceraActividadEditar"
+        android:label="@string/manejo_vistas">
+        <action
+            android:id="@+id/action_terceraActividadEditar_to_terceraActividad"
+            app:destination="@id/terceraActividad"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/segundaActividad"
+        android:name="neuroark.appsytutoriales.pruebadigitalcoaster.ui.main.actividad_2.SegundaActividad"
+        android:label="@string/programacion_iOS"
+        tools:layout="@layout/fragment_segunda_actividad" >
+        <action
+            android:id="@+id/action_segundaActividad_to_navegadorFragment"
+            app:destination="@id/navegadorFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/cuartaActividad"
+        android:name="neuroark.appsytutoriales.pruebadigitalcoaster.ui.main.actividad_4.CuartaActividad"
+        android:label="@string/escaner_codigo_QR"
+        tools:layout="@layout/cuarta_actividad_fragment" >
+        <action
+            android:id="@+id/action_cuartaActividad_to_navegadorFragment"
             app:destination="@id/navegadorFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"

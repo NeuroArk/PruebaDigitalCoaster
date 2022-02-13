@@ -1,4 +1,4 @@
-package neuroark.appsytutoriales.pruebadigitalcoaster.lectorcodigos
+package neuroark.appsytutoriales.pruebadigitalcoaster.lectorcodigos.componentes
 
 import android.app.Activity
 import android.content.Context
@@ -11,7 +11,6 @@ import android.media.Image
 import android.net.Uri
 import android.os.Build
 import android.util.SparseIntArray
-import android.view.Display
 import android.view.Surface
 import androidx.annotation.RequiresApi
 import com.google.mlkit.vision.common.InputImage
@@ -25,7 +24,7 @@ class MlKitVisionImage {
      */
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Throws(CameraAccessException::class)
-    private fun getRotationCompensation(cameraId: String, activity: Activity, isFrontFacing: Boolean): Int {
+    fun getRotationCompensation(activity: Activity, isFrontFacing: Boolean): Int {
         // Get the device's current rotation relative to its "native" orientation.
         // Then, from the ORIENTATIONS table, look up the angle the image must be
         // rotated to compensate for the device's rotation.
@@ -40,22 +39,16 @@ class MlKitVisionImage {
 
         // Get the device's sensor orientation.
         val cameraManager = activity.getSystemService(CAMERA_SERVICE) as CameraManager
+        MY_CAMERA_ID = cameraManager.cameraIdList[0]
         val sensorOrientation = cameraManager
-            .getCameraCharacteristics(cameraId)
+            .getCameraCharacteristics(MY_CAMERA_ID)
             .get(CameraCharacteristics.SENSOR_ORIENTATION)!!
-
         if (isFrontFacing) {
             rotationCompensation = (sensorOrientation + rotationCompensation) % 360
         } else { // back-facing
             rotationCompensation = (sensorOrientation - rotationCompensation + 360) % 360
         }
         return rotationCompensation
-    }
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    @Throws(CameraAccessException::class)
-    private fun getCompensation(activity: Activity, context: Context, isFrontFacing: Boolean) {
-        // Get the ID of the camera using CameraManager. Then:
-        val rotation = getRotationCompensation(MY_CAMERA_ID, activity, isFrontFacing)
     }
 
     fun crearInputImagenConUri(context: Context, uri: Uri): InputImage? {
@@ -90,14 +83,14 @@ class MlKitVisionImage {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    private fun creearImagenInputConMediaImage(mediaImage: Image, rotation: Int):InputImage {
-        return InputImage.fromMediaImage(mediaImage, rotation)
+    fun crearImagenInputConMediaImage(imagen: Image, rotation: Int):InputImage {
+        return InputImage.fromMediaImage(imagen, rotation)
     }
 
     companion object {
 
         private val TAG = "MLKIT"
-        private val MY_CAMERA_ID = "my_camera_id"
+        private var MY_CAMERA_ID = "0"
 
         // [START camera_orientations]
         private val ORIENTATIONS = SparseIntArray()

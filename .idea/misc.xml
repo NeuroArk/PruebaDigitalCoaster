@@ -34,6 +34,7 @@
         <entry key="app/src/main/res/layout/fragment_navegador.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_numeros.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_primer_actividad.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_segunda_actividad.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tercera_actividad.xml" value="0.21" />
         <entry key="app/src/main/res/layout/fragment_tercera_actividad_editar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_textos.xml" value="0.1" />

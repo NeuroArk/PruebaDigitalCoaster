@@ -136,4 +136,6 @@
     <string name="actividad_2">Actividad 2</string>
     <string name="regresar">Regresar</string>
     <string name="capturar">Capturar</string>
+    <string name="permisos_concedidos">Permisos concedidos</string>
+    <string name="permisos_denegados">No podrás usar esta funcionalidad hasta dar los permisos necesarios</string>
 </resources>

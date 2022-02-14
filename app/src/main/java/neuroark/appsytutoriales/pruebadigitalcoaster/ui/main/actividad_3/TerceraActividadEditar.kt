@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import neuroark.appsytutoriales.pruebadigitalcoaster.R
+import neuroark.appsytutoriales.pruebadigitalcoaster.basededatos.BaseDeDatosDAO
 import neuroark.appsytutoriales.pruebadigitalcoaster.databinding.FragmentTerceraActividadBinding
 import neuroark.appsytutoriales.pruebadigitalcoaster.databinding.FragmentTerceraActividadEditarBinding
 
@@ -34,6 +35,7 @@ class TerceraActividadEditar : Fragment() {
             R.id.nav_host_fragment
         )
         binding.act3EditarBtnEditar.setOnClickListener{
+            binding.viewModel.actualizarPerfil()
             navController.navigate(R.id.action_terceraActividadEditar_to_terceraActividad)
         }
         return binding.root

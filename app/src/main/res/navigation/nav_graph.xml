@@ -143,7 +143,7 @@
         android:id="@+id/cuartaActividad"
         android:name="neuroark.appsytutoriales.pruebadigitalcoaster.ui.main.actividad_4.CuartaActividad"
         android:label="@string/escaner_codigo_QR"
-        tools:layout="@layout/cuarta_actividad_fragment" >
+        tools:layout="@layout/fragment_cuarta_actividad" >
         <action
             android:id="@+id/action_cuartaActividad_to_navegadorFragment"
             app:destination="@id/navegadorFragment"

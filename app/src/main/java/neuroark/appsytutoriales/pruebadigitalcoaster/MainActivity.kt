@@ -5,6 +5,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
@@ -14,6 +15,7 @@ import neuroark.appsytutoriales.pruebadigitalcoaster.basededatos.BaseDeDatosDAO
 
 class MainActivity : AppCompatActivity() {
     lateinit var  navController: NavController
+    lateinit var drawerLayout:DrawerLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val toolBarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar_layout)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         val naview: NavigationView = findViewById(R.id.navigationView)
+        drawerLayout = findViewById(R.id.drawer_layout)
         toolBarLayout.title = ""
         setSupportActionBar(toolbar)
         setupActionBarWithNavController(this, navController)
@@ -32,12 +35,14 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
     fun clickNavItem(item: MenuItem) : Boolean{
+        drawerLayout.closeDrawers()
         when (item.itemId) {
             R.id.item_navslid_actividad_1 -> {
                 navController.navigate(R.id.action_global_actividad_1)
                 return true
             }
             R.id.item_navslid_actividad_2 -> {
+
                 navController.navigate(R.id.action_global_actividad_2)
                 return true
             }

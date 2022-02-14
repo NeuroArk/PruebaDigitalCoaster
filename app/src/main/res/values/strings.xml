@@ -138,4 +138,7 @@
     <string name="capturar">Capturar</string>
     <string name="permisos_concedidos">Permisos concedidos</string>
     <string name="permisos_denegados">No podrás usar esta funcionalidad hasta dar los permisos necesarios</string>
+    <string name="hecho">Hecho</string>
+    <string name="err_nombre">El nombre debe de tener mas de tres letras</string>
+    <string name="err_contrasena">La contraseña debe de tener más de 3 letras</string>
 </resources>

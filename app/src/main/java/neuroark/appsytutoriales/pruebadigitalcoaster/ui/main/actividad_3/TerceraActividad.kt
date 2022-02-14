@@ -15,13 +15,17 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import neuroark.appsytutoriales.pruebadigitalcoaster.R
 import neuroark.appsytutoriales.pruebadigitalcoaster.basededatos.BaseDeDatosDAO
+import neuroark.appsytutoriales.pruebadigitalcoaster.basededatos.PerfilRepository
 import neuroark.appsytutoriales.pruebadigitalcoaster.databinding.FragmentTerceraActividadBinding
+import neuroark.appsytutoriales.pruebadigitalcoaster.herramientas.ManejadorPermisos
+import java.util.jar.Manifest
 
 class TerceraActividad : Fragment() {
     companion object {
         fun newInstance() = TerceraActividad()
     }
     private lateinit var binding: FragmentTerceraActividadBinding
+    val manejadorPermisos = ManejadorPermisos(this)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,13 +42,25 @@ class TerceraActividad : Fragment() {
         binding.act3LayoutInstagram.setOnClickListener{
             abrirInstagram()
         }
+        binding.act3LayoutCelular.setOnClickListener{
+            llamarPorTelefono()
+        }
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val viewModel:TerceraActividadModel by activityViewModels()
-        binding.viewModel=viewModel
+        viewModel.repositorio = PerfilRepository(requireActivity().applicationContext)
+        binding.viewModel = viewModel
+        viewModel.cargarPerfil()
+    }
+    fun llamarPorTelefono(){
+        val permiso = android.Manifest.permission.CALL_PHONE
+        if(!manejadorPermisos.tienePermisos(permiso)) {manejadorPermisos.pedirPermisos(binding.root,permiso)}
+            else{ val dial = "tel:${binding.act3TxtCelular.text}"
+                startActivity(Intent(Intent.ACTION_CALL, Uri.parse(dial)))
+            }
     }
     fun abrirInstagram(){
         val url="http://instagram.com/_u/${binding.viewModel!!.perfil.value!!.instagram}"
@@ -54,6 +70,7 @@ class TerceraActividad : Fragment() {
         if (estaInstalada(requireContext(), insta)) startActivity(insta)
         else startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
     }
+
     private fun estaInstalada(ctx: Context, intent:Intent):Boolean {
         val list:List<ResolveInfo> = ctx.packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
         return list.isNotEmpty()

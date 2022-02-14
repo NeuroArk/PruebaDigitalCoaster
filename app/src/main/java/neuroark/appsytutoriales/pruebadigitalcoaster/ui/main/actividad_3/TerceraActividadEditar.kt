@@ -13,8 +13,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
+import com.google.android.material.snackbar.Snackbar
 import neuroark.appsytutoriales.pruebadigitalcoaster.R
 import neuroark.appsytutoriales.pruebadigitalcoaster.basededatos.BaseDeDatosDAO
+import neuroark.appsytutoriales.pruebadigitalcoaster.basededatos.Perfil
+import neuroark.appsytutoriales.pruebadigitalcoaster.basededatos.PerfilRepository
 import neuroark.appsytutoriales.pruebadigitalcoaster.databinding.FragmentTerceraActividadBinding
 import neuroark.appsytutoriales.pruebadigitalcoaster.databinding.FragmentTerceraActividadEditarBinding
 
@@ -35,15 +38,15 @@ class TerceraActividadEditar : Fragment() {
             R.id.nav_host_fragment
         )
         binding.act3EditarBtnEditar.setOnClickListener{
-            binding.viewModel.actualizarPerfil()
-            navController.navigate(R.id.action_terceraActividadEditar_to_terceraActividad)
+            binding.viewModel!!.actualizarPerfil(binding.root)
         }
         return binding.root
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val viewModel:TerceraActividadModel by activityViewModels()
-//        viewModel = ViewModelProvider(this)[TerceraActividadModel::class.java]
-        binding.viewModel=viewModel
+        viewModel.repositorio = PerfilRepository(requireActivity().applicationContext)
+        binding.viewModel = viewModel
+        viewModel.cargarPerfil()
     }
 }

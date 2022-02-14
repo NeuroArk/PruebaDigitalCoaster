@@ -153,6 +153,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/act3_layout_celular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/act3_item_margen_h"
@@ -160,6 +161,8 @@
                     android:layout_marginEnd="@dimen/act3_item_margen_h"
                     android:layout_marginBottom="@dimen/act3_item_margen_v"
                     android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="horizontal">
 
                     <ImageView

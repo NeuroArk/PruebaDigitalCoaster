@@ -6,9 +6,9 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [Perfil::class], version = 1)
+@Database(entities = [Perfil::class], version = 1, exportSchema = false)
 abstract class BaseDeDatosDAO : RoomDatabase() {
-    abstract fun userDao(): PerfilDao
+    abstract fun perfilDao(): PerfilDao
     companion object {
         @Volatile
         private var INSTANCE: BaseDeDatosDAO? = null

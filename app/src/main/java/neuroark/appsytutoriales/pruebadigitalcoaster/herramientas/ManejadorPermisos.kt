@@ -49,4 +49,7 @@ class ManejadorPermisos(val act: Fragment) {
             }
         }
     }
+    fun tienePermisos(permisos: String):Boolean{
+        return ContextCompat.checkSelfPermission(act.requireContext(), permisos) == PackageManager.PERMISSION_GRANTED
+    }
 }
